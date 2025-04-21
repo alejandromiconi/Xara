@@ -12,8 +12,8 @@ set ZIP="D:\Program Files\7-Zip\7z"
 set FILE=%CUR_DIR%_%CUR_DATE%.zip
 
 REM Backup de la base de datos..
-REM set DB=db_trading.bak
-REM pg_dump -U postgres -d trading -h localhost -F c -f .\%DB%
+set DB=xara.bak
+pg_dump -U postgres -d xara -h localhost -F c -f .\%DB%
 
 %ZIP% a %FILE% . -xr!node_modules -xr!vendor -xr!test
 
